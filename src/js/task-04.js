@@ -14,7 +14,7 @@
 
 
 
-let valueEl = Number(document.querySelector('#value').textContent);
+/*let valueEl = Number(document.querySelector('#value').textContent);
 
 let counterValue = document.querySelector('#value');
 
@@ -35,4 +35,13 @@ dekrBtn.addEventListener('click', event => {
   counterValue.innerText = valueEl;
   
 });
-
+*/
+let  counterValue = 0;
+function increment(){
+	counterValue +=1;
+  document.getElementById('value').innerHTML = counterValue;
+}
+function decrement(){
+	counterValue -=1;
+  document.getElementById('value').innerHTML = counterValue;
+}
