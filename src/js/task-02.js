@@ -7,8 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 
-const ulEl = document.querySelector('#ingredients');
 
-const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
+const listEl = document.createElement('li');
 
-ulEl.innerHTML = list;
+listEl.textContent = 'Garlic';
+listEl.classList.add('vegetable')
+
+console.log('listEl', listEl);
