@@ -9,33 +9,33 @@
 Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
 Обновляй интерфейс новым значением переменной counterValue.
 */
+let valueEl = Number(document.querySelector('#value').textContent);
+
+let counterValue = document.querySelector('#value');
+
+const dekrBtn = document.querySelector('#counter').firstElementChild;
+const inkrBtn = document.querySelector('#counter').lastElementChild;
+
+inkrBtn.addEventListener('click', event => {
+  // console.log("Вешаю слушателя события на целевую кнопку");
+  valueEl += 1;
+
+  counterValue.innerText = valueEl;
+});
+
+dekrBtn.addEventListener('click', event => {
+  // console.log("Снимаю слушателя события с целевой кнопки");
+  valueEl -= 1;
+
+  counterValue.innerText = valueEl;
+  // console.log("counterValue", counterValue);
+});
 
 
 
 
-const counterValue = 0;
-const counterValue = document.querySelector('click'){
-  function increment() {counterValue +=1;
-  document.getElementById('value').innerHTML = counterValue;
-}
-function decrement(){
-	counterValue -=1;
-  document.getElementById('value').innerHTML = counterValue;
-}
 
 
 
 
-/*let counterValue = 0;
-const increment = () => {
-  counterValue += 1;
-
-  document.getElementById('value').textContent = counterValue;
-};
-
-const decrement = () => {
-  counterValue -= 1;
-
-  document.getElementById('value').textContent = counterValue;
-};*/
 
