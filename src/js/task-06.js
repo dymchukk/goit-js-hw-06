@@ -3,24 +3,25 @@
  Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
  Для добавления стилей, используй CSS-классы valid и invalid.*/
 
+
 let inputEl = document.querySelector('#validation-input');
 
-let inputLength = inputEl.dataset.length;
+let inputLength = inputEl.data-length;
 
 const input = document.querySelector('input');
-inputEl.addEventListener('change', e => {
-  const text = e.target.value;
+inputEl.addEventListener('change', elem => {
+  const text = elem.target.value;
 
   if (text.length === +inputLength) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+    inputEl.classList.add('.valid');
+    inputEl.classList.remove('.invalid');
   } else {
-    inputEl.classList.remove('valid');
-    inputEl.classList.add('invalid');
+    inputEl.classList.remove('.valid');
+    inputEl.classList.add('.invalid');
   }
-});
 
-// inputEl.classList.remove("invalid", "valid");
+  
+  // inputEl.classList.remove("invalid", "valid");
 // let addClass = "invalid";
 // if (text.length === +inputLength) addClass = "valid";
 // inputEl.classList.add(addClass);

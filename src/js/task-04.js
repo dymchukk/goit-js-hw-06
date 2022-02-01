@@ -13,12 +13,29 @@
 
 
 
-let  counterValue = 0;
-function increment(){
-	counterValue +=1;
+const counterValue = 0;
+const counterValue = document.querySelector('click'){
+  function increment() {counterValue +=1;
   document.getElementById('value').innerHTML = counterValue;
 }
 function decrement(){
 	counterValue -=1;
   document.getElementById('value').innerHTML = counterValue;
 }
+
+
+
+
+/*let counterValue = 0;
+const increment = () => {
+  counterValue += 1;
+
+  document.getElementById('value').textContent = counterValue;
+};
+
+const decrement = () => {
+  counterValue -= 1;
+
+  document.getElementById('value').textContent = counterValue;
+};*/
+
