@@ -45,8 +45,8 @@ const galleryStyle = document.querySelector(".gallery");
   
 const imageStyle = document.querySelectorAll(".image");
 imageStyle.forEach(function callback(image) {
-  image.style.width = "205px";
-  image.style.height = "120px";
+  image.style.width = "350px";
+  image.style.height = "200px";
   image.style.border = "0";
-  image.style.display = "block";
+ 
 });
