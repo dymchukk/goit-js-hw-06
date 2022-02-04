@@ -11,7 +11,6 @@
 
 
 
-
 const gallery = document.querySelector(".gallery")
 
 const images = [
