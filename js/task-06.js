@@ -12,7 +12,7 @@ const inputEl = document.querySelector('#validation-input');
 inputEl.addEventListener('blur', onInputChange);
 
 function onInputChange () {
-    if (inputEl.value.length == inputEl.dataset.length) {
+    if (inputEl.value.length === Number(inputEl.dataset.length)){
         this.classList.add('valid'); 
         this.classList.remove('invalid'); 
     } else {
