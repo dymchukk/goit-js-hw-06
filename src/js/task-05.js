@@ -4,14 +4,14 @@
 //<h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 
-let inputEl = document.querySelector('#name-input');
-inputEl.addEventListener('input', onInputChange);
 
-let outputEl = document.querySelector('#name-output');
+const nameInputEl = document.querySelector("#name-input");
+const nameOutputEl = document.querySelector("#name-output");
 
+nameInputEl.addEventListener('input', onInputChange);
 function onInputChange(event) {
-  inputEl = event.currentTarget.value;
-  console.log(inputEl);
-
-  inputEl !== ' ' ? (outputEl.innerText = inputEl.trim()) : 'Anonymous';
-}
+    nameOutputEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value === "") {
+        nameOutputEl.textContent = 'Anonymous'; 
+    };
+}; 
