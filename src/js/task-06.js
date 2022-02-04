@@ -7,19 +7,16 @@
 
 
 
-let inputEl = document.querySelector('#validation-input');
+const inputEl = document.querySelector('#validation-input');
 
-let inputLength = inputEl.dataset.length;
+inputEl.addEventListener('blur', onInputChange);
 
-const input = document.querySelector('input');
-inputEl.addEventListener('blur', elem => {
-  const text = elem.target.value;
-
-  if (text.length === +inputLength) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
-  } else {
-    inputEl.classList.remove('valid');
-    inputEl.classList.add('invalid');
-  }
-});
+function onInputChange () {
+    if (inputEl.value.length == inputEl.dataset.length) {
+        this.classList.add('valid'); 
+        this.classList.remove('invalid'); 
+    } else {
+        this.classList.remove('valid');
+        this.classList.add('invalid'); 
+    }
+};
